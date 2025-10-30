@@ -6,7 +6,7 @@ import ThreeDScene from './components/ThreeDScene';
 
 const App: FC = () => {
   useEffect(() => {
-    document.title = 'GenAuxi — Intelligent Automation';
+    document.title = 'test';
   }, []);
 
   return (
@@ -18,18 +18,17 @@ const App: FC = () => {
           <ThreeDScene />
         </section>
         <section className={styles.contentSection} id="about">
-          <p className={styles.kicker}>AI-driven automation</p>
-          <h1 className={styles.title}>About GenAuxi</h1>
+          <p className={styles.kicker}>test</p>
+          <h1 className={styles.title}>test</h1>
           <p className={styles.subtitle}>
-            GenAuxi orchestrates intelligent workflows that help modern teams prototype faster, adapt in
-            real time, and scale automation with confidence.
+            test         
           </p>
           <div className={styles.ctaGroup}>
             <button type="button" className={styles.primaryCta}>
               Get started
             </button>
             <a className={styles.secondaryCta} href="#pricing">
-              View pricing
+              test
             </a>
           </div>
         </section>
