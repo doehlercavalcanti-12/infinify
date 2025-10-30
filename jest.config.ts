@@ -5,6 +5,10 @@ const config: Config = {
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   roots: ['<rootDir>/src'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  moduleNameMapper: {
+    '\\.(css|less|sass|scss)$': '<rootDir>/tests/__mocks__/styleMock.ts',
+    '\\.module\\.css$': '<rootDir>/tests/__mocks__/styleMock.ts'
+  },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   transform: {
     '^.+\\.(t|j)sx?$': ['babel-jest', { configFile: './babel.config.cjs' }]

@@ -1,0 +1,121 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 5rem 1.5rem 2rem;
+  gap: 3rem;
+  position: relative;
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: var(--color-text-primary);
+  max-width: 36rem;
+  z-index: 1;
+}
+
+.kicker {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.title {
+  font-size: clamp(2.75rem, 6vw, 4rem);
+  line-height: 1.05;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.ctaGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.primaryCta {
+  padding: 0.85rem 1.75rem;
+  background: var(--color-accent);
+  color: #0b1120;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primaryCta:focus-visible,
+.primaryCta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(65, 105, 225, 0.3);
+}
+
+.secondaryCta {
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(124, 140, 255, 0.4);
+  color: var(--color-text-primary);
+  font-weight: 500;
+  background: rgba(124, 140, 255, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.secondaryCta:focus-visible,
+.secondaryCta:hover {
+  background: rgba(124, 140, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.canvasSection {
+  position: relative;
+  flex: 1;
+  min-height: 320px;
+  border-radius: 32px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.35);
+}
+
+.canvasLabel {
+  position: absolute;
+  inset: 1.25rem auto auto 1.25rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.6);
+  color: #f8fafc;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+@media (min-width: 960px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    padding: 8rem clamp(3rem, 8vw, 8rem);
+  }
+
+  .canvasSection {
+    flex: 1 1 50%;
+    min-height: 520px;
+  }
+
+  .contentSection {
+    flex: 1 1 40%;
+  }
+}

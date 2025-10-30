@@ -4,6 +4,12 @@ A modern React + TypeScript boilerplate powered by Vite. This project includes a
 quality gates (linting, testing, security scans) and end-to-end tooling to help you ship
 production-ready front-end applications quickly.
 
+The default home page showcases a responsive landing experience with a transparent
+navigation bar and an interactive 3D hero built with
+[@react-three/fiber](https://github.com/pmndrs/react-three-fiber) and
+[@react-three/drei](https://github.com/pmndrs/drei). These dependencies are installed by
+default when you run `npm install`.
+
 ## Getting Started
 
 ### 1. Install dependencies
@@ -40,12 +46,14 @@ replacement enabled.
 - `npm run build` – Type-checks the project and produces a production-ready build in
   `dist/`.
 - `npm run lint` – Runs ESLint with React, accessibility, and TypeScript rules.
+- `npm run lint:report` – Produces a Markdown lint summary in `reports/lint.md`.
 - `npm run typecheck` – Performs a strict TypeScript type check without emitting files.
 - `npm run test` – Executes the Jest unit test suite.
 - `npm run coverage:report` – Generates Jest coverage data and outputs a Markdown summary to `reports/coverage.md`.
 - `npm run playwright` – Builds the app and executes Playwright end-to-end tests against the Vite preview server.
 - `npm run security` – Runs the ESLint security ruleset (OWASP-focused) against the
   source code.
+- `npm run security:report` – Produces a Markdown summary of security lint findings in `reports/security.md`.
 
 ## Conventional Commits & Git Hooks
 
